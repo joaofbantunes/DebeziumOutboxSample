@@ -16,11 +16,12 @@
   "transforms.outbox.table.field.event.key": "AggregateId",
   "transforms.outbox.table.field.event.timestamp": "Timestamp",
   "transforms.outbox.table.field.event.payload": "Payload",
+  "transforms.outbox.table.expand.json.payload": true,
   "transforms.outbox.route.by.field": "AggregateType",
   "transforms.outbox.route.topic.replacement": "${routedByValue}.events",
   "transforms.outbox.table.fields.additional.placement": "Type:header:eventType",
-  "transforms.outbox.debezium.expand.json.payload": "true",
   "value.converter":"org.apache.kafka.connect.json.JsonConverter",
   "value.converter.schemas.enable": false,
-  "plugin.name": "pgoutput"
+  "plugin.name": "pgoutput",
+  "topic.prefix": "PgDbSample"
 }
